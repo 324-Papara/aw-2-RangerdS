@@ -14,11 +14,8 @@ namespace Pa.Data.Domain
         public required string Email { get; set; }
         public required string TaxNumber { get; set; }
 
-        [JsonIgnore]
         public virtual FactoryDetail? FactoryDetail { get; set; }
-        [JsonIgnore]
         public virtual List<FactoryLocation>? FactoryLocations { get; set; }
-        [JsonIgnore]
         public virtual List<FactoryPhone>? FactoryPhones { get; set; }
         
     }
