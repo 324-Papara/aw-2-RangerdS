@@ -48,7 +48,7 @@ namespace Pa.Api.Controllers
 
         // GET: api/Factories/GetFilterByFactoryName?factoryName=string
         [HttpGet("GetFilterByFactoryName")]
-        public async Task<ApiResponse<Factory>> GetFilterByFactoryName(string? factoryName)
+        public async Task<ApiResponse<List<Factory>>> GetFilterByFactoryName(string? factoryName)
         {
             Expression<Func<Factory, bool>> filter = x => true;
 
@@ -70,7 +70,7 @@ namespace Pa.Api.Controllers
 
         // GET: api/Factories/GetFilterByCapacity?capacity=135
         [HttpGet("GetFilterByCapacity")]
-        public async Task<ApiResponse<Factory>> GetFilterByCapacity(int? capacity)
+        public async Task<ApiResponse<List<Factory>>> GetFilterByCapacity(int? capacity)
         {
             Expression<Func<Factory, bool>> filter = x => true;
 
